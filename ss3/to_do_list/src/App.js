@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { StudentInfoComponent } from './components/StudentInfoComponent';
+import { ToDoList } from './components/ToDoList';
 
 function App() {
   return (
-    <StudentInfoComponent />
+    <ToDoList />
   );
 }
 
