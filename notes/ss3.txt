@@ -1,0 +1,11 @@
+- React component.
+Component là block code độc lập, có thể tái sử dụng.
+Mỗi component có code JS, HTML, CSS riêng, chúng có thể tái sử dụng, dễ đọc, dễ test.
+Có 2 loại component trong react: function component và class component.
+
+- Props
+Props là từ viết tắt của properties. Được sử dụng để truyền data qua lại giữa các component.
+
+- States
+States là nơi lưu trữ các giá trị của component
+Khi state thay đổi thì component sẽ được render lại (Dùng setState() để cập nhật lại giá trị của state)

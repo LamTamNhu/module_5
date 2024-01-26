@@ -1,0 +1,15 @@
+- ES6: là phiên bản của JS. Phát hành năm 2015, cung cấp một số tính năng mới như cải thiện khai báo biến, class,... toán tử mới.
+
+- Arrow function dùng để bỏ từ khóa function lặp lại. Đại diện cho function bình thường.
+- foreach: duyệt mảng không có trả về.
+- map: duyệt mảng trả về mảng mới.
+- filter: duyệt mảng trả về mảng mới với điều kiện cho trước.
+- reduce: dùng để tính toán trên các phẩn tử của mảng.
+
+- rest param: cho phép biểu diễn một số lượng tham số vô số dưới dạng mảng.
+Tham số cuối cùng biểu diễn bằng dấu 3 chấm (...)
+- spread oeprator: toán tử cho phép thao tác với mảng, object
+ứng dụng:
+- Sao chép thành mảng mới.
+- Gộp nhiều mảng.
+- Sao chép thuộc tính (có ghi đè)

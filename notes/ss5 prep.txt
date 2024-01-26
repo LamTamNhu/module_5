@@ -1,0 +1,17 @@
+1. Cách React tạo form?
+- React tạo form với thẻ form giống với HTML.
+- Dữ liệu của form được quản lý bởi các component, lưu trữ ở state.
+- Kiểm soát các giá trị của nhiều đầu vào bằng cách thêm thuộc tính tên vào mỗi phần tử.
+- Để truy cập các trình xử lý sự kiện, sử dụng cú pháp event.target.name và event.target.value.
+
+Validation.
+- Tạo ra các hàm validation được gọi bởi thuộc tính onChange.
+- Form validation trong React cho phép hiển thị thông báo lỗi nếu người dùng điền không chính xác vào biểu mẫu khớp với loại đầu vào mong đợi.
+
+2. React router.
+- React-Router là một thư viện định tuyến (routing) tiêu chuẩn trong React. Nó giữ cho giao diện của ứng dụng đồng bộ với URL trên trình duyệt. React-Router cho phép bạn định tuyến “luồng dữ liệu” (data flow) trong ứng dụng của bạn một cách rõ ràng. Nó tương đương với sự khẳng định, nếu bạn có URL này, nó sẽ tương đương với Route này, và giao diện tương ứng.
+
+- Cách triển khai: Cho nội dung vào thẻ <BrowserRouter>.
+Sau đó định nghĩa thẻ <Routes>. <Route> có thể nằm trong thẻ khác. 
+<Outlet> render route hiện tại đang chọn.
+<Link> giống thẻ <a>, điều hướng URL và giữ history.

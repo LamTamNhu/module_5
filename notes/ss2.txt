@@ -1,0 +1,17 @@
+- Tổng quan về ReactJS:
+Là thư viện Javascript, tạo ra các thành phần giao diện tái sử dụng.
+Tạo ra bởi facebook.
+Thường được sử dụng để phát triển ứng dụng single-page.
+
+- SSR MPA
+ Nội dung HTMl được xử lý trên server và trả lại cho browser HTML hoàn chỉnh và hiển thị được ngay khi tải về máy client.
+ - CSR SPA
+ Server chỉ có nhiệm vụ trả về mã nguồn của JS và dữ liệu thô cho client. Việc sinh nội dung đều thực hiện ngay trên máy client. (Code JS có nhiệm vụ render giao diện)
+ 
+ - React element là gì?
+ Là một phần tử giúp xây dựng UI trong React.
+ React.createElement(type,props,...children)
+ 
+ - JSX = Javascript + XML
+ JSX là ngôn ngữ kết hợp giữa JS và các thẻ giống HTML để xác định các phần tử giao diện người dùng.
+ So sánh React.createElement và JSX.

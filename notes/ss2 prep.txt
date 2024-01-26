@@ -1,0 +1,38 @@
+1. React components là gì? Các cách tạo?
+	Component là các thành phần độc lập có thể tái sử dụng.
+Trả về mã HTML.
+Có 2 loại components là Class và Function.
+
+Tạo mới Function Component.
+	Tên của component phải bắt đầu bằng chữ cái viết hoa.
+	Trả về HTML.
+	
+Tạo mới Class Component.
+	Phải bao gồm lệnh extends React.Component. Tạo ra sự kế thừa và cấp component quyền truy cập vào các chức năng của React.Component
+	phải có phương thức render() trả về HTML. 
+	
+2. Triển khai State và Prop trong Class Component.
+	Prop trong React tương tự như attribute của HTML hay đối số của JavaScript.
+	Khi cần dữ liệu bất biến ta có thể thêm props khi gọi component.
+	Ta có thể truyền một biến.
+	Truyền một đối tượng
+	Tạo giá trị mặc định cho prop.
+	
+	State là đối tượng mặc định của React component
+	Dùng để lưu trữ các thuộc tính của component
+	Khi đối tượng state thay đổi, component sẽ render lại.
+	State có thể được khởi tạo qua hàm contructor() của component.
+	Cập nhật state bằng phương thức setState() (Không sửa đổi state trực tiếp vì component sẽ không render lại)
+	State được cập nhập gộp.
+	
+3. Pure funtion là gì?
+	Pure funtion là hàm luôn trả về cùng một kết quả nếu tham số truyền vào không thay đổi. Không phụ thuộc vào trạng thái hoặc dữ liệu nào. Chỉ phụ thuộc vào tham số đầu vào của nó.
+	Không tạo ra ảnh hưởng nào đến đối tượng khác.
+	
+	Pure function giúp test dễ dàng hơn và refactor code thuận lợi hơn vì các phần code sẽ không ảnh hưởng lẫn nhau.
+	
+4. Component life Cycle Method?
+Initialization: Đây là giai đoạn mà thành phần được xây dựng với các Props đã cho và trạng thái mặc định. Điều này được thực hiện trong phương thức khởi tạo Component Class 
+Mounting: Giai đoạn này được thực hiện sau khi quá trình initialization(khởi tạo) được hoàn thành. Nó thực hiện nhiệm vụ chuyển virtual DOM (DOM ảo) trong React thành DOM và hiển thị trên trình duyệt.
+Updating: là giai đoạn trạng thái của một thành phần được cập nhật và ứng dụng được render lại.
+Unmounting: là bước cuối cùng của vòng đời thành phần, nơi thành phần được xóa khỏi trang.
