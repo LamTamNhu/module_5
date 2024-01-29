@@ -13,9 +13,16 @@
 resolve: là một hàm callback xử lý cho hành động thành công.
 reject là: một hàm callback xử lý cho hành động thất bại.
 
+Khi một promise được khởi tạo thì có trạng thái:
+-Pending: hành động đang chờ xử lý hoặc bị lỗi.
+- Fulfilled: hành động xử lý xong và thành công.
+- Rejected: hành động xử lý xong và thất bại.
+
 - Async/Await: bản chất là promise, async nằm trước hàm cần khai báo. await được sử dụng trước các thao tác cần đồng bộ. kết quả trả về của async function luôn luôn là một Promise.
 
 4. Tính năng của Axios? Cách triển khai Axios?
+Là thư viện HTTP Client dựa trên promise. Cung ccaasp một API cho việc xử lý XHR (XMLHttpRequests)
+
 Tạo XMLHttpRequests từ trình duyệt
 Thực hiện các http request từ node.js
 Hỗ trợ Promise API
