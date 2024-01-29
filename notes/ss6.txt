@@ -1,0 +1,34 @@
+1.Json server là gì?
+- Json server là một server trả về các dữ liệu dưới dạng json.
+- Lệnh cài đặt: npm install json-server
+- Tạo một thư mục với tên JsonServer. Tạo một file db.json
+- Chạy lệnh:json-server --watch db.json 
+
+2. So sánh Sync và Async?
+- Đồng bộ sẽ thực hiện các công việc một cách tuần tự, xong A rồi mới đến B.
+- Bất đồng bộ thì B sẽ không cần đợi A kết thúc mà bắt đầu luôn. Ta cần cung cấp phương thức callback khi A và B kết thúc.
+
+3. So sánh Promise và Async/Await?
+- Promise sinh ra để xử lý kết quả của một hành động cụ thể, kết quả của mỗi hành động sẽ là thành công hoặc thất bại. 
+resolve: là một hàm callback xử lý cho hành động thành công.
+reject là: một hàm callback xử lý cho hành động thất bại.
+
+- Async/Await: bản chất là promise, async nằm trước hàm cần khai báo. await được sử dụng trước các thao tác cần đồng bộ. kết quả trả về của async function luôn luôn là một Promise.
+
+4. Tính năng của Axios? Cách triển khai Axios?
+Tạo XMLHttpRequests từ trình duyệt
+Thực hiện các http request từ node.js
+Hỗ trợ Promise API
+Chặn request và response
+Chuyển đổi dữ liệu request và response
+Hủy requests
+Tự động chuyển đổi về dữ liệu JSON
+Hỗ trợ phía client để chống lại CSRF(tấn công giả mạo)
+
+- Cài đặt: npm install axios
+- Tạo request: 
+axios({
+  method: 'post',
+  url: 'https://jsonplaceholder.typicode.com/users',
+  data: { user }
+});
