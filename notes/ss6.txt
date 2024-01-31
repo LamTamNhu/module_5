@@ -18,10 +18,20 @@ Khi một promise được khởi tạo thì có trạng thái:
 - Fulfilled: hành động xử lý xong và thành công.
 - Rejected: hành động xử lý xong và thất bại.
 
-- Async/Await: bản chất là promise, async nằm trước hàm cần khai báo. await được sử dụng trước các thao tác cần đồng bộ. kết quả trả về của async function luôn luôn là một Promise.
+- Async/Await: 
++ Là cơ chế thực hiện các thao tác bất đồng bộ một cách tuần tự.
++ Bản chất là promise, async nằm trước hàm cần khai báo. await được sử dụng trước các thao tác cần đồng bộ. kết quả trả về của async function luôn luôn là một Promise.
+
+Async - khai báo một hàm bất đồng bộ
++ tự dộng biến đổi hàm thông thường thành một hàm promise.
++ khi gọi hàm async sẽ xử lý mọi thứ và trả về kết quả trong hàm của nó.
++ async cho phép sử dụng await 
+
+Await sẽ được dùng trước thao tác bất đồng bộ, tạm dừng việc thực hiện async.
++ Khi đặt await trước một promise
 
 4. Tính năng của Axios? Cách triển khai Axios?
-Là thư viện HTTP Client dựa trên promise. Cung ccaasp một API cho việc xử lý XHR (XMLHttpRequests)
+Là thư viện HTTP Client dựa trên promise. Cung cấp một API cho việc xử lý XHR (XMLHttpRequests)
 
 Tạo XMLHttpRequests từ trình duyệt
 Thực hiện các http request từ node.js

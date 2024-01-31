@@ -1,0 +1,53 @@
+1.Redux là gì?
+Redux là một thư viện quản lí state của ứng dụng JS. 
+Redux cung cấp nơi lưu trữ state để sử dụng trong toàn ứng dụng và đảm bảo state được cập nhật theo cách dự đoán được.
+
+State của các node trong single page app. Luồng dữ liệu sẽ phải đi ngược về node cha nên khó khăn và khó kiểm soát. Redux sẽ giải quyết bằng cách dispatch action từ node về store và thay đổi sẽ được cập nhập từ store.
+
+- Khả năng bảo trì.
+- Có thể dự đoán được sự thay đổi của trạng thái.
+- Dễ kiểm thử.
+- Tích hợp với các kiên trúc khác.
+
+2. Các thành phần chính của redux? Flow hoạt động của redux?
+Action, Store và Reducer
+Redux đi theo luồng dữ liệu một chiều.
+Khởi tạo:
+- Tạo redux store từ function root reducer.
+- store gọi hàm root reducer và trả giá trị khởi tạo state.
+- Khi UI render lần đầu, các component sẽ vào store để dùng state trong này và subscire update từ store.
+Update.
+- user click button
+- app dispatch một action đến store.
+- store chạy hàm reducer với state cũ và action mới, lưu giá trị trả về thành state mới.
+- store thông báo đến tất cả thành phần ui đã subs rằng đã update.
+- tất cả component check xem mình có cần thay đổi state không.
+- những component có data thay đổi sẽ render lại.
+
+Giải thích chức năng:
+1. Redux Actions:
+Actions là các đối tượng chứa thông tin về sự kiện (event) trong ứng dụng, thường được khai báo dưới dạng plain JavaScript objects.
+Actions mô tả "đã xảy ra sự kiện gì?" như là một sự kiện trong ứng dụng.
+Mỗi action phải có một thuộc tính type để xác định loại action.
+- action đưuọc gửi đến store bằng dispatch 	
+-----
+2. Redux Reducer:
+Reducer là hàm xử lý sự kiện (event) dựa trên action được gửi đến nó.
+Reducer nhận vào một state hiện tại và một action, sau đó trả về một state mới dựa trên thông tin trong action.
+Reducer phải là hàm pure, tức là không thay đổi trực tiếp state hiện tại, mà trả về một state mới.
+
+quy tắc:
+- không được xử lý các logic bất đồng bộ, tính toán ngẫu nhiên hoặc các hàm side effects.
+
+Logic xử lý:
+- Kiểm tra action truyền vào -> action hợp lệ -> copy state hiện tại -> tạo state mới và xử lý theo nội dung -> return state mới.
+- Nếu actioni không hợp lệ -> return state hiện tại. 
+-----
+3. Redux Store:
+Store là nơi chứa toàn bộ trạng thái của ứng dụng.
+Store giữ liên kết giữa action và reducer. Mỗi lần reducer xử lý sẽ trả về 1 state mới.
+-----
+4. Redux Middleware:
+Middleware là một lớp trung gian giữa action được gửi và reducer xử lý action.
+Middleware cho phép mở rộng chức năng của Redux, như ghi log, xử lý side effects, thậm chí là thay đổi action trước khi nó đến reducer.
+Thực hiện các công việc như xử lý bất đồng bộ, thêm thông tin vào action, hoặc thậm chí thay đổi trạng thái dựa trên action.
