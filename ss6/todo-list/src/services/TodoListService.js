@@ -15,7 +15,10 @@ export async function findAll() {
 export async function save(todo) {
   try {
     console.log(todo);
-    const result=await axios.post("https://jsonplaceholder.typicode.com/todos", todo);
+    const result = await axios.post(
+      "https://jsonplaceholder.typicode.com/todos",
+      todo
+    );
     console.log(result.data);
   } catch (e) {
     console.log(e);

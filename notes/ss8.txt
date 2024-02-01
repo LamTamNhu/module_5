@@ -1,0 +1,16 @@
+SEO
+Search Engine Optimization là qua trình tăng chất lượng và lưu lượng truy cập website bằng cách tối ưu trích xuất HTML, cấu trúc website thân tiện với các công cụ tìm kiếm dữ liệu như google, bing,...
+Các loại hình SEO:
+- SEO từ khóa
+- SEO hình ảnh
+- SEO video social
+
+NextJS
+là một React framework cung cấp các thành phần cần thiết để tạo ra các ứng dụng web nhanh chóng, tính năng nổi bật là SSR và tạo ra các trang web tĩnh SSG.
+
+Tính năng:
+- Built in Optimization
+- SSG
+- Khởi động trang nhanh hơn
+- Refresh page nhanh chóng
+- Router API...
