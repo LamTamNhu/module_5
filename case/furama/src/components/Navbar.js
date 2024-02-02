@@ -1,8 +1,27 @@
+import {Link} from "react-router-dom";
+
 export function Navbar() {
+    function initMode() {
+        document.documentElement.setAttribute('data-bs-theme', 'dark')
+    }
+
+    initMode()
+
+    function modeSwitch() {
+        console.log("clicked!")
+        if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
+            document.getElementById("btnSwitch").innerText = "Light"
+            document.documentElement.setAttribute('data-bs-theme', 'light')
+        } else {
+            document.getElementById("btnSwitch").innerText = "Dark"
+            document.documentElement.setAttribute('data-bs-theme', 'dark')
+        }
+    }
+
     return <>
-        <nav className="navbar navbar-expand-lg  bg-dark border-bottom border-body navStyle" data-bs-theme="dark">
+        <nav className="navbar border-bottom navbar-expand-lg navStyle mb-3">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Furama Đà Nẵng</a>
+                <Link className="navbar-brand" to="/">Furama Đà Nẵng</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -36,9 +55,10 @@ export function Navbar() {
                     </ul>
                     <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button className="btn btn-outline-success" type="submit">Search</button>
+                        <button className="btn btn-outline-primary" type="submit">Search</button>
                     </form>
                 </div>
+                <button className="btn btn-outline shadow ms-3" id="btnSwitch" onClick={modeSwitch}>Dark</button>
             </div>
         </nav>
     </>
