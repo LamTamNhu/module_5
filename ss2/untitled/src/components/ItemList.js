@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
-import {findAll} from "../service/ItemService";
+import {findAll, findByName} from "../service/ItemService";
 import {createSearchParams, Link} from "react-router-dom";
-import {Formik} from "formik";
+import {Field, Form, Formik} from "formik";
 import axios from "axios";
 
 export function ItemList() {
@@ -11,8 +11,6 @@ export function ItemList() {
         async function fetchApi() {
             try {
                 const listUpdated = await findAll()
-                console.log("At component: ")
-                console.log(listUpdated)
                 setItemList(listUpdated)
             } catch (e) {
                 console.log(e)
@@ -22,16 +20,20 @@ export function ItemList() {
         fetchApi()
     }, []);
     return (<div className="container-fluid my-3">
-        {/*<Formik initialValues={{text: ""}} onSubmit={(data) => {*/}
-        {/*    async function search() {*/}
-        {/*        const result = await axios.get("http://localhost:8080/api/items?name=" + data.text)*/}
-        {/*        */}
-        {/*    }*/}
-        {/*    search()*/}
-        {/*}}>*/}
-        {/*    <input className="form-control mb-3" name="text"/>*/}
-        {/*    <button className="btn btn-primary">Search</button>*/}
-        {/*</Formik>*/}
+        <Formik
+            initialValues={{text: ""}}
+            onSubmit={async (data) => {
+                console.log(data.text)
+                const result = await findByName(data.text)
+                setItemList(result)
+            }}>
+            <Form>
+                <div className="col-5">
+                    <Field className="form-control mb-3" name="text"/>
+                    <button type="submit" className="btn btn-primary">Search</button>
+                </div>
+            </Form>
+        </Formik>
 
         <table className="table">
             <thead>

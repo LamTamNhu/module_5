@@ -8,6 +8,7 @@ import {Error} from "./components/Error";
 import {CreateServ} from "./components/CreateServ";
 import {Navbar} from "./components/Navbar";
 import {EditServ} from "./components/EditServ";
+import {CustomerList} from "./components/CustomerList";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
             <Route path="*" element={<Error/>}/>
             <Route path="/service/create" element={<CreateServ/>}/>
             <Route path="/service/edit/:id" element={<EditServ/>}/>
+            <Route path="/customers" element={<CustomerList/>}/>
         </Routes>
     </BrowserRouter>
 );

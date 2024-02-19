@@ -47,7 +47,7 @@ export function EditItem() {
                         name: item.name,
                         date: item.date,
                         amount: item.amount,
-                        type: {id: item.type.id},
+                        type: item.type.id,
                     }
                 }
                 enableReinitialize

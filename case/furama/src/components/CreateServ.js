@@ -3,7 +3,7 @@ import {Field, Form, Formik} from "formik";
 export function CreateServ() {
     return (<>
         <div className="container-fluid">
-            <h1>New Serv</h1>
+            <h1>New Service</h1>
             <Formik initialValues={
                 {
                     name: "",

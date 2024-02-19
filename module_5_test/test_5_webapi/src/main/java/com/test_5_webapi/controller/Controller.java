@@ -10,6 +10,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,9 +24,16 @@ public class Controller {
     IService service;
 
     @GetMapping("/items")
-    public ResponseEntity<Page<Item>> getAll(@PageableDefault(sort = "amount", direction = Sort.Direction.ASC) Pageable pageable) {
+    public ResponseEntity<Page<Item>> getAll(@PageableDefault(sort = "amount", direction = Sort.Direction.ASC) Pageable pageable,
+                                             @RequestParam("name") @Nullable String name) {
         System.out.println(pageable);
-        Page<Item> items = service.findAll(pageable);
+        Page<Item> items;
+        if (name != null) {
+            items = service.findAllByName(name,pageable);
+        } else {
+            items = service.findAll(pageable);
+        }
+        System.out.println(items);
         return new ResponseEntity<>(items, HttpStatus.OK);
     }
 

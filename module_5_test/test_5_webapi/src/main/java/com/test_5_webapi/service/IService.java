@@ -15,4 +15,6 @@ public interface IService {
     void save(Item item);
 
     List<ItemType> getTypes();
+
+    Page<Item> findAllByName(String name, Pageable pageable);
 }

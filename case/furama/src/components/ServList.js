@@ -11,8 +11,7 @@ export function ServList() {
         async function fetchApi() {
             try {
                 const services = await findAll()
-                console.log("At component: ")
-                console.log(services)
+                console.log("Fetching service list")
                 setServices(services)
             } catch (e) {
                 console.log(e)
