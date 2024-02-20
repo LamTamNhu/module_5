@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {EditItem} from "./components/EditItem";
 import {Header} from "./components/Header";
 import {ToastContainer} from "react-toastify";
+import {CreateItem} from "./components/CreateItem";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
             <Routes>
                 <Route path="/" element={<ItemList/>}/>
                 <Route path="/service/edit/:id" element={<EditItem/>}/>
+                <Route path="/service/create" element={<CreateItem/>}/>
             </Routes>
             <ToastContainer />
         </React.StrictMode>

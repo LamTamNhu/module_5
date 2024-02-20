@@ -59,6 +59,8 @@ export function ItemList() {
             </Form>
         </Formik>
 
+        <Link to="/service/create"><button className="btn btn-primary mt-3">Create Item</button></Link>
+
         <table className="table">
             <thead>
             <tr>
