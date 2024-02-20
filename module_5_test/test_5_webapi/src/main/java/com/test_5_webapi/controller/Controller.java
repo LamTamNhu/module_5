@@ -29,7 +29,7 @@ public class Controller {
         System.out.println(pageable);
         Page<Item> items;
         if (name != null) {
-            items = service.findAllByName(name,pageable);
+            items = service.findAllByName(name, pageable);
         } else {
             items = service.findAll(pageable);
         }
@@ -48,7 +48,7 @@ public class Controller {
     public ResponseEntity<?> saveItem(@RequestBody Item item) {
         System.out.println(item.toString());
         service.save(item);
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/types")
@@ -56,4 +56,9 @@ public class Controller {
         return new ResponseEntity<>(service.getTypes(), HttpStatus.OK);
     }
 
+    @DeleteMapping("/items/{id}")
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
+        service.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

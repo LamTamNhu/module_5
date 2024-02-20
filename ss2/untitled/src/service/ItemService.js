@@ -17,3 +17,11 @@ export async function findByName(name) {
         console.log(e)
     }
 }
+
+export async function deleteById(id) {
+    try {
+        await axios.delete("http://localhost:8080/api/items/" + id);
+    } catch (e) {
+        console.log(e)
+    }
+}

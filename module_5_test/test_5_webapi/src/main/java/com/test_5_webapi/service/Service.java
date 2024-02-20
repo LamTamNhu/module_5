@@ -41,4 +41,9 @@ public class Service implements IService {
     public Page<Item> findAllByName(String name, Pageable pageable) {
         return itemRepo.findAllByNameContaining(name,pageable);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        itemRepo.deleteById(id);
+    }
 }

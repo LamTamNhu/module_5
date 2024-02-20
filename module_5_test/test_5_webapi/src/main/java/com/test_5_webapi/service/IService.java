@@ -17,4 +17,6 @@ public interface IService {
     List<ItemType> getTypes();
 
     Page<Item> findAllByName(String name, Pageable pageable);
+
+    void deleteById(Long id);
 }
